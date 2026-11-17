@@ -1,0 +1,92 @@
+{
+  "signedContributors": [
+    {
+      "name": "lukas-brzak-prusa",
+      "id": 163110920,
+      "comment_id": 6836254651,
+      "created_at": "2026-11-12T21:20:19Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 808
+    },
+    {
+      "name": "sarkafa",
+      "id": 65911928,
+      "comment_id": 6846994924,
+      "created_at": "2026-11-13T07:32:06Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 812
+    },
+    {
+      "name": "vyacheslav-voloshyn",
+      "id": 100701079,
+      "comment_id": 6847508773,
+      "created_at": "2026-11-13T08:02:40Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 815
+    },
+    {
+      "name": "mprymek",
+      "id": 2457102,
+      "comment_id": 6847937719,
+      "created_at": "2026-11-13T08:26:06Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 807
+    },
+    {
+      "name": "ddx32",
+      "id": 7354970,
+      "comment_id": 6852363752,
+      "created_at": "2026-11-13T12:06:03Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 820
+    },
+    {
+      "name": "rosta-filip",
+      "id": 77806825,
+      "comment_id": 6852578583,
+      "created_at": "2026-11-13T12:14:57Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 779
+    },
+    {
+      "name": "ithan",
+      "id": 4442226,
+      "comment_id": 6866376825,
+      "created_at": "2026-11-13T22:22:14Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 824
+    },
+    {
+      "name": "michalpomykacz",
+      "id": 2611156,
+      "comment_id": 6880626036,
+      "created_at": "2026-11-14T16:26:01Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 826
+    },
+    {
+      "name": "jakubdotpy3d",
+      "id": 184555770,
+      "comment_id": 6898166522,
+      "created_at": "2026-11-15T17:09:43Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 831
+    },
+    {
+      "name": "ondrejprucha-prusa",
+      "id": 356567025,
+      "comment_id": 6903189383,
+      "created_at": "2026-11-15T23:29:34Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 836
+    },
+    {
+      "name": "h4nz11",
+      "id": 16647253,
+      "comment_id": 6921663788,
+      "created_at": "2026-11-16T16:02:17Z",
+      "repoId": 1107666130,
+      "pullRequestNo": 823
+    }
+  ]
+}
