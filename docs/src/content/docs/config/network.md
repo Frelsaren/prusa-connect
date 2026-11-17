@@ -24,6 +24,9 @@ yourself, may call the API only when its origin is listed in
 nginx or Traefik, belongs in `core.trusted_proxies`. The server then reads the
 real address of each visitor from the header the proxy adds.
 
+To let EasyPrint, the Prusa slicer on Printables, call the API, read
+[Allow EasyPrint to call the server](../using-the-api-from-a-page.md#easyprint).
+
 `core.time_server.enabled` starts a time server on UDP port 123, for a
 camera or another device on a network with no internet. The switch under
 Settings, Server, Network wins once a person uses it. On Linux outside a

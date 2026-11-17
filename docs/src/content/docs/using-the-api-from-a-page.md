@@ -222,6 +222,44 @@ Access-Control-Allow-Origin: http://localhost:5173
 Access-Control-Max-Age: 600
 ```
 
+## Allow EasyPrint to call the server {#easyprint}
+
+EasyPrint is the Prusa slicer that runs in a browser, on the Printables site.
+It can send a print to your server from the browser of the person who uses it.
+Its requests come from the origin `https://slicer.printables.com`, so that is
+the line to add:
+
+```yaml
+core:
+  api:
+    allowed_origins:
+      - https://slicer.printables.com
+```
+
+The list is empty by default, so the server answers EasyPrint only after you
+add the line. The server reads the file when it starts, so restart it after
+you edit the file. On a new server the setup wizard writes the line for you.
+Take the advanced path, and on the network step turn on **Allow EasyPrint**
+under **Allowed browser origins**.
+
+EasyPrint is an HTTPS page. Every browser lets it call a server that answers
+over HTTPS with a certificate the browser trusts. To serve the API that way,
+set `core.api.tls.certificate` and `core.api.tls.key`, which
+[Configure the core](./certificates.md#configure-the-core) lists, or put a
+reverse proxy that holds the certificate in front of the server.
+
+A server on plain HTTP works in fewer browsers, and only on an address of the
+local network. Chrome asks the person for permission to reach devices on the
+local network, and then lets EasyPrint call the server. Another browser may
+refuse the call, so HTTPS is the choice that works everywhere.
+
+To connect the two, open the web app on the address EasyPrint should call.
+Open **Settings**, then **API credentials**, and choose **Add this server to
+EasyPrint**. A new tab opens `https://www.printables.com/slice` with the
+address from your browser's address bar in the `pair_connect_local` parameter.
+EasyPrint then asks the server for a credential, and you approve it the way
+[Pair an app](./scoped-credentials-and-app-pairing.md#pairing) describes.
+
 ## List the printers
 
 `token` is the one minted above.
