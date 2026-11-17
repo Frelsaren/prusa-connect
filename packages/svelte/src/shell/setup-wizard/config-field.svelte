@@ -1,7 +1,8 @@
 <!--
   One configuration key, drawn by its kind: a switch, a list of values, a
   closed set, or text. A key the operator's file sets is shown and not
-  editable, because their value wins (ADR-20261015-ejz rule 12).
+  editable, because their value wins (ADR-20261015-ejz rule 12). A list may
+  offer a known value as a switch under it, which writes the line.
 -->
 <script lang="ts">
   import ExternalLinkIcon from '@lucide/svelte/icons/external-link';
@@ -32,6 +33,7 @@
   } from '../../primitives';
   import { hintOf, labelOf } from './labels';
   import { type Answer, errorOf, startOf } from './model';
+  import { holds, suggestionsOf, withoutValue, withValue } from './suggestions';
 
   interface ConfigFieldProps {
     key: SetupKey;
@@ -98,6 +100,10 @@
     key.kind === 'text_list'
       ? `${hintOf(key)} ${t('setupWizard.field.list')}`
       : hintOf(key),
+  );
+
+  const offers = $derived(
+    key.kind === 'text_list' && !key.locked ? suggestionsOf(key.path) : [],
   );
 
   const choices = $derived(key.choices ?? []);
@@ -193,6 +199,26 @@
         },
       }}
     />
+    {#each offers as offer (offer.value)}
+      {@const name = t(offer.label)}
+      <SettingsRow label={name} description={t(offer.note)}>
+        {#snippet control()}
+          <Switch
+            aria-label={name}
+            checked={holds(shown, offer.value)}
+            data-part="suggestion"
+            data-value={offer.value}
+            onCheckedChange={(next: boolean) => {
+              onanswer(
+                next
+                  ? withValue(shown, offer.value)
+                  : withoutValue(shown, offer.value),
+              );
+            }}
+          />
+        {/snippet}
+      </SettingsRow>
+    {/each}
   {/if}
   <div class="flex min-h-8 flex-wrap items-center gap-2">
     <span class="me-auto font-mono text-xs text-muted-foreground"

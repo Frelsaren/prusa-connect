@@ -331,6 +331,8 @@
   "setupWizard.storage.ready": "Folder jest gotowy, a serwer może w nim zapisywać.",
   "setupWizard.storage.title": "Gdzie przechowywać pliki?",
   "setupWizard.storage.willCreate": "Serwer utworzy ten folder, gdy potwierdzisz.",
+  "setupWizard.suggest.easyPrint": "Zezwól na EasyPrint",
+  "setupWizard.suggest.easyPrint.note": "EasyPrint to slicer Prusa działający w przeglądarce, na Printables. Po włączeniu jego strona może łączyć się z tym serwerem i wysyłać do niego wydruki, gdy ktoś tutaj to zatwierdzi.",
   "setupWizard.summary.access": "Kto się loguje",
   "setupWizard.summary.admin": "Administrator",
   "setupWizard.summary.adminSubject": "Administrator (sub)",

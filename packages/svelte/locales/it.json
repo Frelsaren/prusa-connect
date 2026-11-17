@@ -331,6 +331,8 @@
   "setupWizard.storage.ready": "La cartella è pronta e il server può scriverci.",
   "setupWizard.storage.title": "Dove conservare i file?",
   "setupWizard.storage.willCreate": "Il server crea questa cartella quando confermi.",
+  "setupWizard.suggest.easyPrint": "Consenti EasyPrint",
+  "setupWizard.suggest.easyPrint.note": "EasyPrint è lo slicer di Prusa che funziona nel browser, su Printables. Con questa opzione attiva, la sua pagina può contattare questo server e inviargli stampe, dopo che una persona qui lo approva.",
   "setupWizard.summary.access": "Chi accede",
   "setupWizard.summary.admin": "Amministratore",
   "setupWizard.summary.adminSubject": "Amministratore (sub)",

@@ -345,6 +345,8 @@
   "setupWizard.storage.ready": "Der Ordner ist bereit und der Server kann hineinschreiben.",
   "setupWizard.storage.title": "Wo sollen Dateien gespeichert werden?",
   "setupWizard.storage.willCreate": "Der Server erstellt diesen Ordner, wenn du bestätigst.",
+  "setupWizard.suggest.easyPrint": "EasyPrint erlauben",
+  "setupWizard.suggest.easyPrint.note": "EasyPrint ist der Slicer von Prusa, der im Browser auf Printables läuft. Ist das an, darf seine Seite diesen Server aufrufen und Drucke an ihn senden, sobald eine Person hier zustimmt.",
   "setupWizard.summary.access": "Wer sich anmeldet",
   "setupWizard.summary.admin": "Administrator",
   "setupWizard.summary.adminSubject": "Administrator (sub)",

@@ -331,6 +331,8 @@
   "setupWizard.storage.ready": "La carpeta está lista y el servidor puede escribir en ella.",
   "setupWizard.storage.title": "¿Dónde se guardan los archivos?",
   "setupWizard.storage.willCreate": "El servidor crea esta carpeta cuando confirmes.",
+  "setupWizard.suggest.easyPrint": "Permitir EasyPrint",
+  "setupWizard.suggest.easyPrint.note": "EasyPrint es el laminador de Prusa que funciona en el navegador, en Printables. Con esto activado, su página puede usar este servidor y enviarle impresiones, después de que una persona lo apruebe aquí.",
   "setupWizard.summary.access": "Quién inicia sesión",
   "setupWizard.summary.admin": "Administrador",
   "setupWizard.summary.adminSubject": "Administrador (sub)",

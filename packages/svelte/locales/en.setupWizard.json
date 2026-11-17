@@ -303,6 +303,8 @@
   "setupWizard.storage.ready": "The folder is ready, and the server can write to it.",
   "setupWizard.storage.title": "Where should files be kept?",
   "setupWizard.storage.willCreate": "The server creates this folder when you confirm.",
+  "setupWizard.suggest.easyPrint": "Allow EasyPrint",
+  "setupWizard.suggest.easyPrint.note": "EasyPrint is the Prusa slicer that runs in a browser, on Printables. With this on, its page may call this server and send prints to it, after a person here approves it.",
   "setupWizard.summary.access": "Who signs in",
   "setupWizard.summary.admin": "Administrator",
   "setupWizard.summary.adminSubject": "Administrator (sub)",

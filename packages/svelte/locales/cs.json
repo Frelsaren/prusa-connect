@@ -369,6 +369,8 @@
   "setupWizard.storage.ready": "Složka je připravená a server do ní může zapisovat.",
   "setupWizard.storage.title": "Kam ukládat soubory?",
   "setupWizard.storage.willCreate": "Server tuto složku vytvoří, až potvrdíš.",
+  "setupWizard.suggest.easyPrint": "Povolit EasyPrint",
+  "setupWizard.suggest.easyPrint.note": "EasyPrint je slicer od Prusy, který běží v prohlížeči na Printables. Když je to zapnuté, jeho stránka smí volat tento server a posílat na něj tisky, jakmile to tady někdo schválí.",
   "setupWizard.summary.access": "Kdo se přihlašuje",
   "setupWizard.summary.admin": "Administrátor",
   "setupWizard.summary.adminSubject": "Administrátor (sub)",
