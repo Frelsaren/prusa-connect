@@ -70,6 +70,12 @@ export interface SettingsCredentialsScreenProps {
   onRevoke: (credential: ApiCredential) => void;
   /** Where a person approves an app that asked for a credential. */
   pairHref: string;
+  /**
+   * The address that opens EasyPrint with this server's address in it, from
+   * `easyPrintPairHref`. Absent where nothing knows the address a browser
+   * reaches this server on, and the link is then not drawn.
+   */
+  easyPrintHref?: string | undefined;
   /** Where the columns, the shape and the page size are kept between visits. */
   store?: ListingStore;
 }

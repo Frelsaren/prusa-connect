@@ -3,6 +3,7 @@
 
   import type { ApiCredential } from '../../data';
   import { fakeListingStore } from '../../test/fakes';
+  import { easyPrintPairHref } from '../easyprint';
   import SettingsCredentialsScreen from './settings-credentials-screen.svelte';
   import type { CredentialsSource } from './types';
 
@@ -66,6 +67,7 @@
     onDismiss: () => undefined,
     onRevoke: () => undefined,
     pairHref: '/pair',
+    easyPrintHref: easyPrintPairHref('https://prusa-connect.lan'),
   };
 
   /** A store already holding the stacked shape, so the second one has a story. */
@@ -82,6 +84,12 @@
 <Story
   name="None Yet"
   args={{ credentials: source({ items: [] }), ...ports }}
+/>
+
+<!-- A caller that does not know the server's address draws no EasyPrint link. -->
+<Story
+  name="Without The EasyPrint Link"
+  args={{ credentials: source(), ...ports, easyPrintHref: undefined }}
 />
 
 <!-- The shape the toolbar's other choice draws, at any width. -->

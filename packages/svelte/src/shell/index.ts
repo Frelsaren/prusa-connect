@@ -45,6 +45,7 @@ export {
   STATE_REASON_KEY,
 } from './print-picker';
 export { productSubtitle } from './product-subtitle';
+export { easyPrintPairHref } from './easyprint';
 export {
   announceNotice,
   AppShell,

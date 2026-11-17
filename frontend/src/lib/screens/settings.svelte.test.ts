@@ -89,6 +89,28 @@ describe('the API credentials room', () => {
     await expect.element(page.getByText('laptop').first()).toBeInTheDocument();
   });
 
+  // EasyPrint calls the server from the person's browser, so the address it
+  // is given is the one this page was opened on.
+  it('links to EasyPrint with the address this page was opened on', async () => {
+    const ctx = appContext({
+      'GET /api/v1/auth/credentials': json(200, { items: [credential] }),
+    });
+
+    await render(ApiCredentials, { props: { ctx } });
+
+    const link = page.getByRole('link', {
+      name: 'Add this server to EasyPrint',
+    });
+    await expect.element(link).toBeInTheDocument();
+    const href = new URL(link.element().getAttribute('href') ?? '');
+    expect(`${href.origin}${href.pathname}`).toBe(
+      'https://www.printables.com/slice',
+    );
+    expect(href.searchParams.get('pair_connect_local')).toBe(
+      window.location.origin,
+    );
+  });
+
   it('revokes one by the id the listing names', async () => {
     const gone: string[] = [];
     const ctx = appContext({

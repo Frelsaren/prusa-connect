@@ -69,6 +69,7 @@
     onDismiss,
     onRevoke,
     pairHref,
+    easyPrintHref,
     store = browserStore(),
   }: SettingsCredentialsScreenProps = $props();
 
@@ -454,6 +455,26 @@
       {#if listing.pager}
         <Pager {...listing.pager} total={listing.total} />
       {/if}
+    {/if}
+
+    {#if easyPrintHref !== undefined}
+      <!-- EasyPrint is another site. It opens in a tab of its own and sends
+           the person back to the pairing page with its code. -->
+      <p class="text-sm">
+        <Button variant="link">
+          {#snippet child({ props }: { props: Record<string, unknown> })}
+            <a
+              {...props}
+              href={easyPrintHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-part="easyprint-link"
+            >
+              {t('settingsCredentials.easyPrint.label')}
+            </a>
+          {/snippet}
+        </Button>
+      </p>
     {/if}
   </CardContent>
 </Card>

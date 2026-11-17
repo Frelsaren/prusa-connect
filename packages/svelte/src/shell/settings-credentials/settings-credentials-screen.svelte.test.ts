@@ -358,6 +358,34 @@ describe('SettingsCredentialsScreen', () => {
     expect(container.textContent).toContain('Paired app');
   });
 
+  // EasyPrint is another site, so it opens beside this page and the address
+  // comes from the caller, who knows where this server is reached.
+  it('links to EasyPrint in a new tab when the caller names the address', async () => {
+    const easyPrintHref =
+      'https://www.printables.com/slice?pair_connect_local=https%3A%2F%2Fconnect.lan';
+    await render(SettingsCredentialsScreen, {
+      props: screen({ easyPrintHref }),
+    });
+
+    const link = page.getByRole('link', {
+      name: 'Add this server to EasyPrint',
+    });
+    await expect.element(link).toHaveAttribute('href', easyPrintHref);
+    await expect.element(link).toHaveAttribute('target', '_blank');
+    await expect.element(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  it('draws no EasyPrint link when nothing names the address', async () => {
+    await render(SettingsCredentialsScreen, { props: screen() });
+
+    await expect
+      .element(page.getByRole('link', { name: 'Pair an app' }))
+      .toBeVisible();
+    await expect
+      .element(page.getByRole('link', { name: 'Add this server to EasyPrint' }))
+      .not.toBeInTheDocument();
+  });
+
   it('asks before a revocation, because nothing brings one back', async () => {
     const onRevoke = vi.fn();
     await render(SettingsCredentialsScreen, { props: screen({ onRevoke }) });
